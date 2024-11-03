@@ -158,11 +158,12 @@ label blacked_monika_rap:
         m 5dubfu "Writing rap lyrics is nothing compared to writing himself into our bloodlines!"
     m 1hksdlb "Ahaha! Sorry if that sounds silly, but it would be really interesting to see what they came up with."
     m 1hua "It would really be a learning experience!"
-
-    $ p_nickname = mas_get_player_nickname()
-    m 1eua "Do you listen to rap music, [p_nickname]?{nw}"
-    $ _history_list.pop()
-    menu:
+    
+    if persistent._mas_pm_like_rap is None:
+        $ p_nickname = mas_get_player_nickname()
+        m 1eua "Do you listen to rap music, [p_nickname]?{nw}"
+        $ _history_list.pop()
+        menu:
         m "Do you listen to rap music, [p_nickname]?{fast}"
         "Yes.":
             $ persistent._mas_pm_like_rap = True
@@ -182,7 +183,6 @@ label blacked_monika_rap:
             m 1ekc "Oh... Well I can understand that, rap music isn't everyone's taste."
             m 3hua "But if you ever do decide to give it a try, I'm sure we can find an artist or two that we both like!"
     return
-#TODO: I derandomed that, I should do a check to make sure she doesn't ask about liking rap every time.
 
 init 1 python:
     config.label_overrides["monika_date"] = "blacked_monika_date"
@@ -525,7 +525,6 @@ init 1 python:
     config.label_overrides["monika_fanfiction"] = "blacked_monika_fanfiction"
 
 label blacked_monika_fanfiction:
-    # I'm too tired to check this over right now.
     m 1wuo "[player]!"
     m 1eua "I've been curious about something lately."
     m 1euc "Have you heard of fanfiction?"
@@ -1292,41 +1291,43 @@ label blacked_monika_familygathering:
         m 1hubfa "That must've been so~ adorable!"
     m 1lsc "I don't remember much about my family, let alone my relatives, however we didn't usually get together that much."
     m 1lksdlc "Not even around the holidays or on special occasions."
-    m 1hub "When you see your family this year, be sure to bring me along okay?"
-    m 1eua "I'd love to meet all of your relatives."
 
-    m "Do you think they'd like me, [player]?{nw}"
-    $ _history_list.pop()
-    menu:
-        m "Do you think they'd like me, [player]?{fast}"
+    if persistent._mas_pm_fam_like_monika != False:
+        m 1hub "When you see your family this year, be sure to bring me along okay?"
+        m 1eua "I'd love to meet all of your relatives."
 
-        "Yes.":
-            $ persistent._mas_pm_fam_like_monika = True
-            m 1eka "I'm glad you think so."
-            m 1eua "I'm sure we'd all get along nicely."
-            m 1hua "I'm looking forward to it, my dear~"
+    if persistent._mas_pm_fam_like_monika is None:
+        m "Do you think they'd like me, [player]?{nw}"
+        $ _history_list.pop()
+        menu:
+            m "Do you think they'd like me, [player]?{fast}"
 
-        "No.":
-            $ persistent._mas_pm_fam_like_monika = False
-            m 1wud "..."
-            m 1ekc "Oh, I didn't realize."
-            m 1dsc "I understand though."
-            m 1eka "Just know I'd try my best to make them like me."
-            m "Even if they never will."
-            m 1hua "I'll always stick by your side forever~"
+            "Yes.":
+                $ persistent._mas_pm_fam_like_monika = True
+                m 1eka "I'm glad you think so."
+                m 1eua "I'm sure we'd all get along nicely."
+                m 1hua "I'm looking forward to it, my dear~"
 
-        "...":
-            $ persistent._mas_pm_fam_like_monika = False
-            m 2wuo "Don't tell me, [player]."
-            m 2ekc "Are you afraid that I'll embarrass you?"
-            m 2tfc "..."
-            m 1eka "Don't worry, I completely understand."
-            m 1lksdla "If I found out one of my relatives was dating some person trapped inside of a computer, I'd think it'd be weird too."
-            m 1eua "If you want to keep me a secret, then that's fine."
-            m 1hub "After all, it just means more alone time with you~"
+            "No.":
+                $ persistent._mas_pm_fam_like_monika = False
+                m 1wud "..."
+                m 1ekc "Oh, I didn't realize."
+                m 1dsc "I understand though."
+                m 1eka "Just know I'd try my best to make them like me."
+                m "Even if they never will."
+                m 1hua "I'll always stick by your side forever~"
+
+            "...":
+                $ persistent._mas_pm_fam_like_monika = False
+                m 2wuo "Don't tell me, [player]."
+                m 2ekc "Are you afraid that I'll embarrass you?"
+                m 2tfc "..."
+                m 1eka "Don't worry, I completely understand."
+                m 1lksdla "If I found out one of my relatives was dating some person trapped inside of a computer, I'd think it'd be weird too."
+                m 1eua "If you want to keep me a secret, then that's fine."
+                m 1hub "After all, it just means more alone time with you~"
 
     return 
-# TODO: not derandoming anymore, stop her from asking if you already answered
 
 init 1 python:
     config.label_overrides["monika_citizenship"] = "blacked_monika_citizenship"
@@ -1998,9 +1999,10 @@ label blacked_monika_overton:
     m 1huu "Thanks for listening~"
     return
 
-init 1 python:
-    config.label_overrides["nsfw_compliment_tits"] = "blacked_compliment_tits"
+# init 1 python:
+#     config.label_overrides["nsfw_compliment_tits"] = "blacked_compliment_tits"
 
-label blacked_compliment_tits:
-    m 1etc "Submod override test!"
-    
+# label blacked_compliment_tits:
+#     m 1etc "Submod override test!"
+
+#This is merely proof of concept you can do overrides like this with not just the original MAS but also other submods. That one above overrides a topic in the NSFW Submod by Nick Wildish. 

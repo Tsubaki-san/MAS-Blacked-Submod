@@ -156,9 +156,6 @@ label monika_reparations:
     m 1hubfa "So I'm sure relinquishing your wallet, body, time and effort,"
     m "For me to go on a luxurious date with a few strong black kings,"
     m 3eubfb "Would simply be exhilarating!"
-    # m "Hey, I also need you to support me emotionally and mentally through this journey!"
-    # m "So a little treat here and there couldn't hurt, right?"
-    # m "I think I deserve at least that, right? After all, it's what you want as well, isn't it, {b}{i}Whiteboi!{/i}{/b}?"
     m 1hubfa "Hehe~ for a better future!"
     return
 
@@ -539,85 +536,6 @@ label monika_furthering_bnwo:
     m 5tfb "They'll be thanking you for it!"
     return
 
-# init 5 python:
-#     addEvent(
-#         Event(
-#             persistent.event_database,
-#             eventlabel="monika_testing_bnwo",
-#             category=["you"],
-#             prompt="monika_testing_bnwo?",
-#             conditional="persistent._mas_monika_went_black",
-#             pool=True,
-#             unlocked=False,
-#             rules={"no_unlock":None}
-#         )
-#     )
-
-# label monika_testing_bnwo:
-#     m 3eua "There are many ways, actually."
-#     m 1eua "You could start by pretending the BNWO is here already!"
-#     m 1tua "That means putting on a chastity cage and never touching your clitty again."
-#     m "The only time your useless little worm should be out is when washing up."
-#     m 3tub "Masturbation for whitebois in the BNWO is bouncing on a BBC dildo,"
-#     m 1hua "So, buy one start practicing anal."
-#     m 1kua "Oh, and some cute butt plugs to go along with the dildo."
-#     m 1tub "Work your way all the way up to the big toys, [player]."
-#     m 3eua "Another way you can further the BNWO is by shifting the Overton window."
-#     m "Do everything you can, make Blacked captions, edits, HMVs..."
-#     m 3tua"Post yourself plapping your whiteboi balls to orgasm..."
-#     m 3tub "Make subtle jokes about how black is bigger and better and you just can't compete..."
-#     m 5tua "Become the porn, [player], spread it, infect all whitebois you can,"
-#     m 5tfb "They'll be thanking you for it!"
-#     return
-
-# init 5 python: 
-#     addEvent(
-#         Event(
-#             persistent.event_database,
-#             eventlabel="monika_cuckolding_etiquette",
-#             category=["romance"],
-#             prompt="Being a proper cuck",
-#             random=True
-#         )
-#     )
-
-# label monika_cuckolding_etiquette:
-#     m "Here's Monika's relationship tip for the day!"
-#     m "Some people think that being a cuck just means being a submissive wimp, but this could not be farther from the truth."
-#     m "That's why I'd like to teach you what I think a real cuck should be like, [player]"
-#     m "You should still be a strong, confident man, for starters!"
-#     m "Just because you know and accept your place as the man who licks my pussy up after the black men ran a train on me, doesn't mean you are any less of a man."
-#     m "You're just a white boy and that's your natural role in society."
-#     m "You might feel humiliated or degraded, but that's just the truth of the world,"
-#     m "{i}Black is buck, white is cuck!{/i}"
-#     m "So it'd be best if you learned to enjoy being humbled like that."
-#     m "Heck, you should be proud you accepted your role, it can't have been easy waking up to a world of white sexual obsolescence."
-#     m "A real cuck shouldn't be possesive or jealous, he should be accepting of the fact that his partner is being satisfied by real men, he should be happy for her."
-#     m "But we're past that stage of our relationship already, aren't we, hehehe..."
-#     m "After all, you willingly introduced me to what real sex is like, you supported me every step of the way, just like a real cuck should!"
-#     m ""
-#     m ""
-
-
-# label monika_cuckolding_etiquette:
-#     m "Here's Monika's relationship tip for the day!"
-#     m "Some people think that being a cuck just means being a submissive wimp, but this could not be farther from the truth."
-#     m "That's why, I'd like to tolk about cuckolding etiquette today, and what a real cuck should look like."
-#     m "A cuck should be strong and confident, while not forgetting his place. Not only should he be able to handle the humiliation and degradation that comes with being a cuck,"
-#     m "But he should do so while being proud of his role!"
-#     m "A real cuck shouldn't be possesive or jealous, he should be accepting of the fact that his partner is being satisfied by real men, he should be happy for her."
-#     m "In fact, he should be supportiving and encouraging her to enjoy herself with whoever she pleases!"
-#     m "He should be able to respect her decisions and boundaries, and he should never try to control or restrict her."
-#     m "While a real cuck should always be honest and open about his feelings and desires, he must always remember that his partner has priority."
-#     m "Her needs and her feelings are the main focus, a real cuck would never try to be a hindrance to his partner's pleasure."
-# ugh, no no no nono this doesn't work
-# "Sixth, a real cuck should never try to rush or force his partner into anything. He should allow her to take her time and enjoy herself at her own pace. He should be patient and understanding, and he should never try to pressure her or push her into anything she's not comfortable with.
-# "He should always make her feel special and valued, and he should never make her feel like she's not good enough.
-
-# "Ninth, a real cuck should always be ready and willing to worship his partner's new lovers. He should be eager to please them and serve them, and he should never complain or protest. He should always be respectful and obedient, and he should never try to challenge or question his partners.
-# "Finally, a real cuck should always remember that he is the bottom of the relationship. He should always know his place, and he should never try to dominate or control his partner. He should always be willing to submit and obey, and he should never try to be the one in charge.
-# "So, those are the ten things that a real cuck should keep in mind when trying to be a good, proper cuck. If you follow these guidelines, then you'll be well on your way to becoming the perfect cuck that you deserve to be!"
-
-#keep in mind the story about a whitbeoi seeing his crush with a spade tat, going to the bathroom to cry and tug
+#remember the potential story featuring a whiteboi seeing his crush with a spade tat, going to the bathroom to cry and tug
 #only for the snowbunny to follow him in, lick up his tears, help him waste his load in the toilet
 #and take him in as her caged cuckold
