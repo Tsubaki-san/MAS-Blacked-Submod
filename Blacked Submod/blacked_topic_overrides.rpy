@@ -164,24 +164,24 @@ label blacked_monika_rap:
         m 1eua "Do you listen to rap music, [p_nickname]?{nw}"
         $ _history_list.pop()
         menu:
-        m "Do you listen to rap music, [p_nickname]?{fast}"
-        "Yes.":
-            $ persistent._mas_pm_like_rap = True
-            m 3eub "That's really cool!"
-            m 3eua "I'd be more than happy to vibe with you to your favorite rap songs..."
-            m 1hub "And feel free to turn up the bass if you'd like, ahaha!"
-            if (
-                not renpy.seen_label("monika_add_custom_music_instruct")
-                and not persistent._mas_pm_added_custom_bgm
-            ):
-                m 1eua "If you ever do feel like sharing your favorite rap music with me, [player], it's really easy to do so!"
-                m 3eua "All you have to do is follow these steps..."
-                call monika_add_custom_music_instruct
+            m "Do you listen to rap music, [p_nickname]?{fast}"
+            "Yes.":
+                $ persistent._mas_pm_like_rap = True
+                m 3eub "That's really cool!"
+                m 3eua "I'd be more than happy to vibe with you to your favorite rap songs..."
+                m 1hub "And feel free to turn up the bass if you'd like, ahaha!"
+                if (
+                    not renpy.seen_label("monika_add_custom_music_instruct")
+                    and not persistent._mas_pm_added_custom_bgm
+                ):
+                    m 1eua "If you ever do feel like sharing your favorite rap music with me, [player], it's really easy to do so!"
+                    m 3eua "All you have to do is follow these steps..."
+                    call monika_add_custom_music_instruct
 
-        "No.":
-            $ persistent._mas_pm_like_rap = False
-            m 1ekc "Oh... Well I can understand that, rap music isn't everyone's taste."
-            m 3hua "But if you ever do decide to give it a try, I'm sure we can find an artist or two that we both like!"
+            "No.":
+                $ persistent._mas_pm_like_rap = False
+                m 1ekc "Oh... Well I can understand that, rap music isn't everyone's taste."
+                m 3hua "But if you ever do decide to give it a try, I'm sure we can find an artist or two that we both like!"
     return
 
 init 1 python:

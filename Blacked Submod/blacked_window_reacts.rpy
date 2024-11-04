@@ -10,6 +10,7 @@ label blacked_wrs_r34:
                     "Why don't you go to BlackedBooru instead, hehe...",
                     "Don't forget the dark_skinned_male tag, cucky."
                 ],'Window Reactions'
+            )
             MASEventList.queue('monika_nsfw')
         else:
             mas_display_notif(m_name,
