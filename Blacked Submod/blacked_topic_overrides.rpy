@@ -1,5 +1,5 @@
 init 1 python:
-    config.label_overrides["monika_college"] = "blacked_monika_nsfw"
+    config.label_overrides["monika_nsfw"] = "blacked_monika_nsfw"
 
 label blacked_monika_nsfw:
     if persistent._mas_monika_went_black:
