@@ -2045,3 +2045,5 @@ label blacked_monika_twitter:#Change it so it points to a blacked monika account
 #     m 1etc "Submod override test!"
 
 #This is merely proof of concept you can do overrides like this with not just the original MAS but also other submods. That one above overrides a topic in the NSFW Submod by Nick Wildish. 
+
+#TODO: overwrite that swords topic to go into how handling BBC is an art
