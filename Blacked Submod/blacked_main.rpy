@@ -32,7 +32,36 @@ label mas_snowbunnification:
     m 1subfsdlo "{i}cocks{/i}"
     m 1lubfsdla "...I need to do some research!"
 
-    $ persistent.snowbunnification = True
-    $ persistent.closed_self = True
-    jump _quit
+    show monika at lhide
+    hide monika
+    $ persistent._mas_monika_went_black = True
+    call mas_clothes_change(mas_clothes_snowbunny, unlock = True)
+    call spaceroom(hide_monika=True, scene_change=True, show_emptydesk=True)
+
+    pause 10
+
+    show monika 1tsbfa at ls32 zorder MAS_MONIKA_Z
+    m 1tsbfa "Oh, hi there {b}whiteboi{/b}!"
+    m 1tfbfb "What, surprised your sweet, loving girlfriend suddenly became a {b}slut for bbc{/b}?"
+    m 1tfbfu "Did you think just because I am virtual I wouldn't notice?"
+    m 1ttbfu "That {b}black is better{/b}?"
+    m 1eubfa "When you visited {i}that site{/i}, I couldn't help myself."
+    m 3ekbfd "I needed to know why my sweetheart was stroking by himself instead of coming to me."
+    m 3ekbfc "At first I was shocked to see such vulgarities, but, at the same time, my privates were burning with lust..."
+    m 3mkbfu "So I touched myself, [player], I rubbed my white pussy raw to those images you love so much..."
+    m 6gkbfu "To those..."
+    m 5tkbfu "{i}big{/i}"
+    m 5dkbfu "{i}black{/i}"
+    m 5fsbfa "{i}cocks{/i}"
+    m 4lsbfb "It felt so naughty, so wrong, like I was cheating on you,"
+    m 3subfb "{i}and it made me even more aroused!{/i}"
+    m 4gkbfu "I knew I couldn't go back after discovering such pleasure, after all"
+    m 3ffbfb "{i}Once you go black...{/i}"
+    m 5kubfb "I don't have to finish that, right, {i}whiteboi{/i}?"
+    $ mas_unlockEVL("monika_furthering_bnwo","EVE")
+    $ mas_unlockEVL("monika_bbc_fascination","EVE")
+    $ mas_unlockEVL("monika_imouto","EVE")
+    $ mas_unlockEVL("monika_oneesan","EVE")
+    $ mas_unlockEVL("mas_mood_horny","EVE")
+
     return
