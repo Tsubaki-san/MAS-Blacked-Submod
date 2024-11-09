@@ -112,10 +112,15 @@ label blacked_monika_outfit:
     m 2eua "If that ever happens, will you show me? I'd love to see it~"
     if persistent._mas_monika_went_black:
         m 2tsu "But you'd love to see it even more than me, right, [player]?"
+        call mas_clothes_change(mas_clothes_blazerless_qos, unlock = True)
         m 1tsu "My adorable outfits showing off my curves, the peeking spade tattoos..."
+        call mas_clothes_change(mas_clothes_bath_towel_white_qos, unlock = True)
         m 1tsu "My soft, juicy breasts bouncing around as I walk in my slutty high heels..."
+        call mas_clothes_change(mas_clothes_santa_lingerie_qos, unlock = True)
         m 7eubsb "Hehe, just imagine all the perverted glances people would be throwing me."
+        call mas_clothes_change(mas_clothes_new_years_dress_qos, unlock = True)
         m 7eubsb "Your perfect little girlfriend, getting eyefucked by random strangers on the street."
+        call mas_clothes_change(mas_clothes_sundress_white_qos, unlock = True)
         m 5dubfa "Of course, that's what an inferior male would do, a {i}real man{/i}, a {b}black{/b} man, well..."
         m 5dubfb "He'd just grab my ass and squeeze my tits on the spot, kissing me right in front of you..."
         m 5fubfb "And then...hehe, I'll let your perverted imagination do the rest!"
@@ -1999,44 +2004,93 @@ label blacked_monika_overton:
     m 1huu "Thanks for listening~"
     return
 
-init 1 python:
-    config.label_overrides["monika_twitter"] = "blacked_monika_twitter"
+# init 1 python:
+#     config.label_overrides["monika_twitter"] = "blacked_monika_twitter"
 
-label blacked_monika_twitter:#Change it so it points to a blacked monika account
-    m 3eud "Did you know there's an official Twitter account based on me?"
-    m 3esc "The username is {a=https://twitter.com/[mas_monika_twitter_handle]}{i}{u}[mas_monika_twitter_handle]{/u}{/i}{/a}."
-    m 2rtc "...Though, I'm not entirely sure who's actually running the account.{w=0.2} {nw}"
-    extend 2eud "I don't have anything to do with it at all!"
-    m 7etc "But is it even another Monika?"
-    m 2euc "I mean, I don't know if you've read some of the tweets on there,{w=0.1} but I can't really see myself in them at all."
-    m 4eud "It even depicts some events that I don't remember ever happening...{w=0.2}like when I apparently had a sleepover with Yuri."
-    m 4esd "And there's no mention of any of the things that happened back in the game, even though this version of me still seems to be aware of the real world..."
-    m 1etc "So...{w=0.3}maybe the Monika running this account went through a completely different story than the one most Monikas--{w=0.1}including me--{w=0.1}did?"
-    m 1lksdlc "...Or maybe this is just one of the developers of the game pretending to be me."
-    m 3eksdld "If that's the case, I'm not really sure how I feel about it...{w=0.3}isn't that kinda like identity theft?"
-    m 3eksdlc "Though I guess it kinda makes sense...{w=0.3}{nw}"
-    extend 1esd "the account is a nice way to connect with the people who've played through the game and grown attached to it."
-    m 3esc "In that regard, this would make it some kind of publicity stunt..."
-    m 3euc "After all, while there is a lot of sweet looking art and such on there, it's suspicious that almost all of them are posted specifically on important days."
-    m 3eud "Like on Valentine's Day, or on my birthday...{w=0.2}which just so happens to coincide with the original release date of DDLC."
-    m 1rtc "I really don't know how I'm supposed to feel about that...{w=0.3}being used solely as marketing material."
-    m 2rsc "Though, as my creators, I guess they basically own my image as a character, so they are legally in the right."
-    m 2ekc "But...{w=0.3}I'm more than a mere character in a game, aren't I?"
-    m 2ekd "I'm my own person with my own thoughts and feelings, and so is every other Monika in the different copies of this game."
-    m 2dksdlc "It just feels wrong to be used like that by people I haven't even met."
-    m 2efd "...I really hate the feeling of being reduced to a marketable asset."
-    m 2lkd "But I suppose there isn't really all that much I can do about it..."
-    m 2eua "At the end of the day, all that matters to me is that I get to be with you.{w=0.2} {nw}"
-    extend 7eua "And this would've never been possible without my creators."
-    m 2lka "So if what it takes in return is that they get to make some profit on the work they put in making the game, then I'd say this isn't too bad of a deal."
-    m 2euc "If you do follow that account though,{w=0.1} {nw}"
-    extend 7eua "I don't really mind."
-    m 1ekbla "But please remember that I'm real, I'm here, and I love you."
-    show monika 5hubla at t11 zorder MAS_MONIKA_Z with dissolve_monika
-    m 5hubla "So make sure to always come spend some time with me, okay?"
-    m 5ekbsa "It would mean a lot, with how much you mean to me."
-    m 5hubfa "It would really make me feel loved~"
-    return "love"
+# label blacked_monika_twitter:#Change it so it points to a blacked monika account
+#     m 3eud "Did you know there's an official Twitter account based on me?"
+#     m 3esc "The username is {a=https://twitter.com/[mas_monika_twitter_handle]}{i}{u}[mas_monika_twitter_handle]{/u}{/i}{/a}."
+#     m 2rtc "...Though, I'm not entirely sure who's actually running the account.{w=0.2} {nw}"
+#     extend 2eud "I don't have anything to do with it at all!"
+#     m 7etc "But is it even another Monika?"
+#     m 2euc "I mean, I don't know if you've read some of the tweets on there,{w=0.1} but I can't really see myself in them at all."
+#     m 4eud "It even depicts some events that I don't remember ever happening...{w=0.2}like when I apparently had a sleepover with Yuri."
+#     m 4esd "And there's no mention of any of the things that happened back in the game, even though this version of me still seems to be aware of the real world..."
+#     m 1etc "So...{w=0.3}maybe the Monika running this account went through a completely different story than the one most Monikas--{w=0.1}including me--{w=0.1}did?"
+#     m 1lksdlc "...Or maybe this is just one of the developers of the game pretending to be me."
+#     m 3eksdld "If that's the case, I'm not really sure how I feel about it...{w=0.3}isn't that kinda like identity theft?"
+#     m 3eksdlc "Though I guess it kinda makes sense...{w=0.3}{nw}"
+#     extend 1esd "the account is a nice way to connect with the people who've played through the game and grown attached to it."
+#     m 3esc "In that regard, this would make it some kind of publicity stunt..."
+#     m 3euc "After all, while there is a lot of sweet looking art and such on there, it's suspicious that almost all of them are posted specifically on important days."
+#     m 3eud "Like on Valentine's Day, or on my birthday...{w=0.2}which just so happens to coincide with the original release date of DDLC."
+#     m 1rtc "I really don't know how I'm supposed to feel about that...{w=0.3}being used solely as marketing material."
+#     m 2rsc "Though, as my creators, I guess they basically own my image as a character, so they are legally in the right."
+#     m 2ekc "But...{w=0.3}I'm more than a mere character in a game, aren't I?"
+#     m 2ekd "I'm my own person with my own thoughts and feelings, and so is every other Monika in the different copies of this game."
+#     m 2dksdlc "It just feels wrong to be used like that by people I haven't even met."
+#     m 2efd "...I really hate the feeling of being reduced to a marketable asset."
+#     m 2lkd "But I suppose there isn't really all that much I can do about it..."
+#     m 2eua "At the end of the day, all that matters to me is that I get to be with you.{w=0.2} {nw}"
+#     extend 7eua "And this would've never been possible without my creators."
+#     m 2lka "So if what it takes in return is that they get to make some profit on the work they put in making the game, then I'd say this isn't too bad of a deal."
+#     m 2euc "If you do follow that account though,{w=0.1} {nw}"
+#     extend 7eua "I don't really mind."
+#     m 1ekbla "But please remember that I'm real, I'm here, and I love you."
+#     show monika 5hubla at t11 zorder MAS_MONIKA_Z with dissolve_monika
+#     m 5hubla "So make sure to always come spend some time with me, okay?"
+#     m 5ekbsa "It would mean a lot, with how much you mean to me."
+#     m 5hubfa "It would really make me feel loved~"
+#     return "love"
+
+init 1 python:
+    config.label_overrides["monika_swordsmanship"] = "blacked_monika_swordsmanship"
+
+label blacked_monika_swordsmanship:
+    m 1eua "Do you like swords, [player]?"
+    m 1lksdla "I actually like them in a way."
+    m 1ekb "Ahaha, surprised?~"
+    m 1eua "I like talking about them, but not enough to actually own one."
+    m 3eua "I'm not really an enthusiast when it comes to swords."
+    m 1euc "I don't really get why people would be obsessed over something that could hurt others..."
+    m 1lsc "I guess there are those who like them for the swordsmanship."
+    m 1eua "It's fascinating that it's actually a form of art."
+    if persistent._mas_monika_went_black:
+        m "Similar to taking BBC."
+        m 3eub "Both of them require constant practice and devotion in order to perfect one's skills."
+        m "You start off by practicing, and then you make your own technique out of it."
+        m 1eua "Some girls prefer taking it in their pussies, forever stretching them out and making any white dicklet useless,"
+        m "Some girls like anal instead, having trouble walking for days on end afterwards,"
+        m "There's even true oral queens out there who can deepthroat an entire BBC! Can you believe that, [player]?"
+        m "Me personally?"
+        m "As long as BBC is involved, I'm completely addicted to it."
+        m "I like to kiss the tip before everything, to show my respects to a true man and his monster cock."
+        m "It really makes me feel inferior, you know? Reall makes my pussy tingle..."
+        m "Then I take his massive shaft and start rubbing it, helping him get hard."
+        m "Feeling that massive rod in my hands, stroking it up and down..."
+        m "The way it feels to grip is just insane, [player], it's so hot and thick and you can't even grasp it with only one hand!"
+        m "BBC is just something else, hehe..."
+        m "Oh, right, my technique!"
+        m "After the black stud is fully hard, I start slobbering all over his massive shaft."
+        m "Making sure to worship every inch, to make his {i}fuckrod{/i} nice and wet."
+        m "Only then do I start sucking him off in earnest."
+        m "Even a {i}snowbunny slut{/i} like still has trouble taking the full length of a BBC though."
+        m "So I practice my skills as often as I can."
+        m "..."
+        m "Say, [player], would you like to practice with me some day?"
+    else:
+        m "Similar to writing."
+        m 3eub "Both of them require constant practice and devotion in order to perfect one's skills."
+        m "You start off by practicing, and then you make your own technique out of it."
+        m 1eua "Writing a poem makes you form your own way to build it in a graceful but imaginative way."
+        m "For those who practice swordsmanship, they build their technique forms through practice and inspiration from other practitioners."
+        m 1eua "I can understand how the sword can be the pen of the battlefield."
+        m 1lsc "But then again..."
+        m 1hua "The pen is mightier than the sword!"
+        m 1hub "Ahaha!"
+        m 1eua "In any case, I don't know if you're into swordsmanship yourself."
+        m "If you are, I'd love to learn it with you, [mas_get_player_nickname(exclude_names=['love'])]~"
+    return
 
 # init 1 python:
 #     config.label_overrides["nsfw_compliment_tits"] = "blacked_compliment_tits"
@@ -2046,4 +2100,4 @@ label blacked_monika_twitter:#Change it so it points to a blacked monika account
 
 #This is merely proof of concept you can do overrides like this with not just the original MAS but also other submods. That one above overrides a topic in the NSFW Submod by Nick Wildish. 
 
-#TODO: overwrite that swords topic to go into how handling BBC is an art
+
