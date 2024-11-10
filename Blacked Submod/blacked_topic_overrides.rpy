@@ -111,16 +111,13 @@ label blacked_monika_outfit:
 
     m 2eua "If that ever happens, will you show me? I'd love to see it~"
     if persistent._mas_monika_went_black:
+        $ store.mas_selspr.unlock_clothes(mas_clothes_blazerless_qos)
+        $ store.mas_selspr.unlock_clothes(mas_clothes_def_qos)
         m 2tsu "But you'd love to see it even more than me, right, [player]?"
-        call mas_clothes_change(mas_clothes_blazerless_qos, unlock = True)
         m 1tsu "My adorable outfits showing off my curves, the peeking spade tattoos..."
-        call mas_clothes_change(mas_clothes_bath_towel_white_qos, unlock = True)
         m 1tsu "My soft, juicy breasts bouncing around as I walk in my slutty high heels..."
-        call mas_clothes_change(mas_clothes_santa_lingerie_qos, unlock = True)
         m 7eubsb "Hehe, just imagine all the perverted glances people would be throwing me."
-        call mas_clothes_change(mas_clothes_new_years_dress_qos, unlock = True)
         m 7eubsb "Your perfect little girlfriend, getting eyefucked by random strangers on the street."
-        call mas_clothes_change(mas_clothes_sundress_white_qos, unlock = True)
         m 5dubfa "Of course, that's what an inferior male would do, a {i}real man{/i}, a {b}black{/b} man, well..."
         m 5dubfb "He'd just grab my ass and squeeze my tits on the spot, kissing me right in front of you..."
         m 5fubfb "And then...hehe, I'll let your perverted imagination do the rest!"
@@ -193,6 +190,8 @@ init 1 python:
     config.label_overrides["monika_date"] = "blacked_monika_date"
 
 label blacked_monika_date:
+    if not mas_SELisUnlocked(mas_clothes_sundress_white_qos):
+        call mas_clothes_change(mas_clothes_sundress_white_qos, unlock = True)
     m 1hub "I've been imagining all the romantic things we could do if we went on a date..."
     m 3eua "We could get lunch, go to a cafe..."
     m "Go shopping together..."
@@ -232,9 +231,11 @@ label blacked_monika_cold:
     m 1hua "Cold weather makes for better cuddle weather.{w=0.2} {nw}"
     extend 1hub "Ahaha!"
     if persistent._mas_monika_went_black:
+        if not mas_SELisUnlocked(mas_clothes_santa_lingerie_qos):
+            call mas_clothes_change(mas_clothes_santa_lingerie_qos, unlock = True)
         m 5dusdla "Ah, getting plowed by a strong dark bull on a cold winter's day, his fiery cock ramming my womb..."
         m  "His virile body emanating heat while he slams into me..."
-        m 5tfsdla "Forget about hot chocolate, [player], I'll be serving you something mu~ch better!"
+        m 5tfsdla "Forget about hot chocolate, [player], I'd be serving you something mu~ch better!"
     return
 
 init 1 python:
@@ -1349,25 +1350,25 @@ label blacked_monika_citizenship:
     m 2wub "Like taking online classes or something."
     m 1lksdlc "I don't want to get there and be a burden because I can't find a job."
     if persistent._mas_monika_went_black:
-        m "Then again, there's plenty of opportunities for a {i}young, {b}fertile{/b} white girl like me{/i}!"
-        m "I could open an {i}Onlyfans{/i} account and post naughty pics of me there."
-        m "I'm certain we'd be a hit in the {i}interracial cuckolding{/i} scene!"
-        m "Oh~ just imagine all the possibilities!"
-        m "I could put you down on all fours, wearing nothing but your chastity cage and a blindfold,"
+        m 4eua "Then again, there's plenty of opportunities for a {i}young, {b}fertile{/b} white girl like me{/i}!"
+        m 1eua "I could open an {i}Onlyfans{/i} account and post naughty pics of me there."
+        m 5eub "I'm certain we'd be a hit in the {i}interracial cuckolding{/i} scene!"
+        m 5dka "Oh~ just imagine all the possibilities!"
+        m 5fka "I could put you down on all fours, wearing nothing but your chastity cage and a blindfold,"
         m "Put a towel on you, so you don't get the pleasure of feeling me as I use you like a stool..."
-        m "Then proceed to please as many big black bulls as I can!"
-        m "Fufu~ you'd be absolutely drenched in my saliva and their {i}tasty, potent cum{/i} by the time we're done."
-        m "Then, we'd film the cleanup scene..."
-        m "Another option would be signing up for Blacked!"
-        m "It would make for a far more professional setting, plus, I'd make sure to ask them to send us a copy of the finished product!"
-        m "Could you imagine that, [player]?"
-        m "A late night on the couch with me,"
+        m 5fkb "Then proceed to please as many big black bulls as I can!"
+        m 5dsa "Fufu~ you'd be absolutely drenched in my saliva and their {i}tasty, potent cum{/i} by the time we're done."
+        m 5ssa "Then, we'd film the cleanup scene..."
+        m 3esb "Another option would be signing up for Blacked!"
+        m 3tka "It would make for a far more professional setting, plus, I'd make sure to ask them to send us a copy of the finished product!"
+        m 5dka "Could you imagine that, [player]?"
+        m 5mka "A late night on the couch with me,"
         m "When, suddenly, I leave you for a few moments,"
-        m "Only to return in my Blacked underwear and high heels..."
-        m "I'd put the recording on, wrap you in a tight hug..."
-        m "And go to sleep!"
-        m "What, did you think we would {i}do something else{/i}?"
-        m "You're such a pervert, [player]!"
+        m 5sua "Only to return in my Blacked underwear and high heels..."
+        m 5eua "I'd put the recording on, wrap you in a tight hug..."
+        m 5tfa "And go to sleep!"
+        m 5tfb "What, did you think we would {i}do something else{/i}?"
+        m 5hub "You're such a pervert, [player]!"
     else:
         m "Sorry, I guess I shouldn't worry so much about things I can't change."
         m 2eka "But I want to make you happy, so...I'm going to do everything I can to keep bettering myself while I'm stuck here!"
@@ -1770,6 +1771,8 @@ label blacked_monika_hot_springs:
     m 3hksdlb "...So don't just go jumping into some random pool of boiling water, ahaha!"
     m 1eua "Anyway...{w=0.2}I'd like to try an open-air bath in particular.{w=0.3} I hear they really give a unique experience."
     if persistent._mas_monika_went_black:
+        if not mas_SELisUnlocked(mas_clothes_bath_towel_white_qos):
+            call mas_clothes_change(mas_clothes_bath_towel_white_qos, unlock = True)
         m 5ekbfa "Can you imagine it, [player]? {w=0.3}Both of us relaxing in a nice, soothing hot pool..."
         if mas_isWinter():
             m 5dubfu "Warming our chilled bodies after a long day out in the harsh cold..."
@@ -1822,7 +1825,7 @@ label blacked_monika_player_away:
         m 1eubsb "is watching the resulting recordings."
         m 7tubsa "I guess you could call it a hobby of mine, but I really love seeing myself dominated"
         m 5gubsa "Thrown around like a cumrag, passed from one black stud to the next, like some sort of"
-        m 5dubsb "[i]cheap communal onahole{/i}."
+        m 5dubsb "{i}cheap communal onahole{/i}."
         m 5rubsa "Seeing my expression as my head goes blank from the mind-breaking orgasms."
         m 5sfbsa "Knowing you too will get to see this, and how much it will turn you on..."
         m 4eubsb "When I'm not filming, I sometimes go on dates with my {i}co-stars{/i}."
@@ -2061,23 +2064,23 @@ label blacked_monika_swordsmanship:
         m "You start off by practicing, and then you make your own technique out of it."
         m 1eua "Some girls prefer taking it in their pussies, forever stretching them out and making any white dicklet useless,"
         m "Some girls like anal instead, having trouble walking for days on end afterwards,"
-        m "There's even true oral queens out there who can deepthroat an entire BBC! Can you believe that, [player]?"
-        m "Me personally?"
-        m "As long as BBC is involved, I'm completely addicted to it."
-        m "I like to kiss the tip before everything, to show my respects to a true man and his monster cock."
-        m "It really makes me feel inferior, you know? Reall makes my pussy tingle..."
-        m "Then I take his massive shaft and start rubbing it, helping him get hard."
+        m 1subsa "There's even true oral queens out there who can deepthroat an entire BBC! Can you believe that, [player]?"
+        m 4rubsa "Me personally?"
+        m 4skbsa "As long as BBC is involved, I'm completely addicted to it."
+        m 5gkbsa "I like to kiss the tip before everything, to show my respects to a true man and his monster cock."
+        m 5tsbsa "It really makes me feel inferior, you know? Reall makes my pussy tingle..."
+        m 5msbsa "Then I take his massive shaft and start rubbing it, helping him get hard."
         m "Feeling that massive rod in my hands, stroking it up and down..."
-        m "The way it feels to grip is just insane, [player], it's so hot and thick and you can't even grasp it with only one hand!"
-        m "BBC is just something else, hehe..."
-        m "Oh, right, my technique!"
-        m "After the black stud is fully hard, I start slobbering all over his massive shaft."
+        m 5ssbsb "The way it feels to grip is just insane, [player], it's so hot and thick and you can't even grasp it with only one hand!"
+        m 5dsbsa "BBC is just something else, hehe..."
+        m 6wubssdrt "Oh, right, my technique!"
+        m 7tubfa "After the black stud is fully hard, I start slobbering all over his massive shaft."
         m "Making sure to worship every inch, to make his {i}fuckrod{/i} nice and wet."
-        m "Only then do I start sucking him off in earnest."
-        m "Even a {i}snowbunny slut{/i} like still has trouble taking the full length of a BBC though."
-        m "So I practice my skills as often as I can."
-        m "..."
-        m "Say, [player], would you like to practice with me some day?"
+        m 1tubfa "Only then do I start sucking him off in earnest."
+        m 1rubfsdlc "Even a {i}snowbunny slut{/i} like still has trouble taking the full length of a BBC though."
+        m 1tubfa "So I practice my skills as often as I can."
+        m 1mubfa "..."
+        m 1tubfb "Say, [player], would you like to practice with me some day?"
     else:
         m "Similar to writing."
         m 3eub "Both of them require constant practice and devotion in order to perfect one's skills."

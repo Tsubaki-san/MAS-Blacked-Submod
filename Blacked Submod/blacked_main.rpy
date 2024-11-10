@@ -35,10 +35,11 @@ label mas_snowbunnification:
     show monika at lhide
     hide monika
     $ persistent._mas_monika_went_black = True
-    call mas_clothes_change(mas_clothes_snowbunny, unlock = True)
-    call spaceroom(hide_monika=True, scene_change=True, show_emptydesk=True)
     call mas_clothes_change(mas_def_qos, unlock = True)
     call spaceroom(hide_monika=True, scene_change=True, show_emptydesk=True)
+    call mas_clothes_change(mas_clothes_snowbunny, unlock = True)
+    call spaceroom(hide_monika=True, scene_change=True, show_emptydesk=True)
+
 
     pause 10
 

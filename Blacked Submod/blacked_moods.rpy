@@ -12,6 +12,8 @@ init 5 python:
     )
 
 label mas_mood_horny:
+    if not mas_SELisUnlocked(mas_clothes_new_years_dress_qos):
+        call mas_clothes_change(mas_clothes_new_years_dress_qos, unlock = True)
     m 1tta "Oh, is that so?"
     m 1tfb "Little cucky got triggered and now wants mistress to take care of it?"
     m 1eua "Hehe, what was it this time?"
