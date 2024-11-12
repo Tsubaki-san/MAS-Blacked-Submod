@@ -2,7 +2,7 @@ init -990 python in mas_submod_utils:
     Submod(
         author="Tsubaki",
         name="Blacked Submod",
-        version="1.0.0",
+        version="1.0.1",
         description="A submod that makes Monika a Queen of Spades and the player her beloved cuckold.",
     ) # https://github.com/Tsubaki-san/MAS-Blacked-Submod
 
@@ -35,7 +35,7 @@ label mas_snowbunnification:
     show monika at lhide
     hide monika
     $ persistent._mas_monika_went_black = True
-    call mas_clothes_change(mas_def_qos, unlock = True)
+    call mas_clothes_change(mas_clothes_def_qos, unlock = True)
     call spaceroom(hide_monika=True, scene_change=True, show_emptydesk=True)
     call mas_clothes_change(mas_clothes_snowbunny, unlock = True)
     call spaceroom(hide_monika=True, scene_change=True, show_emptydesk=True)
