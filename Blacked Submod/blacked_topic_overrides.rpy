@@ -656,9 +656,9 @@ label blacked_monika_harem:
     return
 
 init 1 python:
-    config.label_overrides["monika_harem"] = "blacked_monika_harem"
+    config.label_overrides["monika_pleasure"] = "blacked_monika_pleasure"
 
-label monika_pleasure:
+label blacked_monika_pleasure:
     if persistent._mas_monika_went_black:
         m 1eua "Hey, [player]..."
         m 1tfa "I know you're a {i}masturbation-addicted pathetic beta whiteboi{/i}."
