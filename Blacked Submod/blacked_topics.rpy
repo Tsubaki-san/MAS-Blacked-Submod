@@ -321,7 +321,7 @@ label monika_skimpy_outfit:
             "nothing but a bikini that emphasizes my jiggling breasts",
             "a glittery, silver cocktail dress, barely covering my nipples, and the highest heels I can find",
             "my Blacked gymwear",
-            "nothing by spade-shaped pasties and slutty heels",
+            "nothing but spade-shaped pasties and slutty heels",
             "my usual thigh-high boots with Yuri's sweater and a pair of elegant panties"
         ]
 
@@ -333,7 +333,7 @@ label monika_skimpy_outfit:
     m 5gubsa "I was thinking of wearing [skympy_quip]."
     m 5eubsa "I want him to see my entire body, to be turned on by it."
     m 5dubfa "I want him to watch as I tease and play with myself in front of him, as I spread my legs and rub my wet pussy for his huge black cock."
-    m 5dkbfa "I want to rub against his dark rod and feel it through his clothes, to make sure I'm dripping we by the time he pins me down to fuck my brains out."
+    m 5dkbfa "I want to rub against his dark rod and feel it through his clothes, to make sure I'm dripping wet by the time he pins me down to fuck my brains out."
     m 5rtbfa "Hmm... or maybe I should wear something else?"
     m 1esbfa "What do you think, [player]?"
     m 1gsbfa "He's always loved seeing me in my skimpy little outfits."
