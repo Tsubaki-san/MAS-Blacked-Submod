@@ -298,6 +298,7 @@ label monika_qos_tattoos:
     m 3subfa "Cute, teasable and meant to be caged cuckolds."
     m 3eubfa "It also symbolizes my ownership over you~"
     m 5hubfa "You're my most prized posession, [player]!"
+    
     return "love"
 
 init 5 python:
@@ -321,7 +322,7 @@ label monika_skimpy_outfit:
             "nothing but a bikini that emphasizes my jiggling breasts",
             "a glittery, silver cocktail dress, barely covering my nipples, and the highest heels I can find",
             "my Blacked gymwear",
-            "nothing but spade-shaped pasties and slutty heels",
+            "nothing by spade-shaped pasties and slutty heels",
             "my usual thigh-high boots with Yuri's sweater and a pair of elegant panties"
         ]
 
@@ -333,7 +334,7 @@ label monika_skimpy_outfit:
     m 5gubsa "I was thinking of wearing [skympy_quip]."
     m 5eubsa "I want him to see my entire body, to be turned on by it."
     m 5dubfa "I want him to watch as I tease and play with myself in front of him, as I spread my legs and rub my wet pussy for his huge black cock."
-    m 5dkbfa "I want to rub against his dark rod and feel it through his clothes, to make sure I'm dripping wet by the time he pins me down to fuck my brains out."
+    m 5dkbfa "I want to rub against his dark rod and feel it through his clothes, to make sure I'm dripping we by the time he pins me down to fuck my brains out."
     m 5rtbfa "Hmm... or maybe I should wear something else?"
     m 1esbfa "What do you think, [player]?"
     m 1gsbfa "He's always loved seeing me in my skimpy little outfits."
@@ -535,6 +536,73 @@ label monika_furthering_bnwo:
     m 5tua "Become the porn, [player], spread it, infect all whitebois you can,"
     m 5tfb "They'll be thanking you for it!"
     return
+
+init 5 python:
+    addEvent(
+        Event(
+                persistent.event_database,
+                eventlabel='monika_cage',
+                prompt="I bought a chastity cage",
+                category=['you'],
+                pool=True,
+                unlocked=False,
+                conditional="monika_caging_benefits, monika_furthering_bnwo",
+                rules={"monika_caging_benefits, monika_furthering_bnwo": None}
+        )
+    )
+
+label monika_cage:
+    m 1ttbfu "Oh, [player], you bought a chastity cage?"
+    m "You really took my advice to heart, didn't you?"
+    m 7hub "What a cute little pet you are! That's why I love you so much!"
+    m 4eub "Did you know that there are many different types of chastity cages?"
+    m "Flat ones, curved ones, spiked ones, reversed ones, even ones with cathethers! Or even cute designs like pussy designs!"
+    m 4sub "Not to mention the different materials and colors they can be made of!"
+    m 1tubfu "Now tell me, [player], I wonder who are you going to give the key to?"
+    m pause 3 "..."
+    m 7nubfu "Who am I kidding, you're going to give it to me, right?"
+    m 3tfbfb "Remember, you're not allowed to take it off without my permission! nor cum without it either!"
+    m 1tfbfb "I own you completely, [player], and I will make sure you never forget it!"
+    m 5dsbfa "I can't wait to see you in it, [player]!"
+    m "I'm sure you'll look absolutely adorable! And so helplessly BUILT FOR BBC!"
+    m 4eua "So say goodbye to jerking your little clitty, [player], and say hello to a life of servitude!"
+    m 5tua "Let your fetish consume you, just like I did with the BNWO..."
+    m 5tubfa "Reject you fragile masculinity, and embrace the true masculinity of the black race!"
+    m 5dubfa "{i}sigh{/i} I'm so proud of you, [player]. Thank you for being such a beta for me."
+    return "love"
+
+init 5 python:
+    addEvent(
+        Event(
+                persistent.event_database,
+                eventlabel='monika_tattoos',
+                prompt="I can't stop staring at your tattoos",
+                category=['you', 'monika'],
+                pool=True,
+                unlocked=False,
+                conditional="monika_qos_tattoos",
+                rules={"monika_qos_tattoos": None}
+        )
+    )
+
+label monika_tattoos:
+    m 1ttbfu "Oh, [player], you can't stop staring at my tattoos?"
+    m 5tubfa "Mmm, looks like someone is enjoying the new me~ Fufu~ I'm glad you like them!"
+    m 7hub "It's a way for me to show my dedication to the BNWO."
+    m 7tub "And to remember silly whitebois like you that I'm BBC only."
+    m 5dubfa "BBC."
+    m 5fubfa "ONLY."
+    m 7hub "I have to admit, it feels pretty good to let loose and embrace my inner slut."
+    m 1ttbfu "And seeing you drool over me like this... it's such a turn-on."
+    m 5dubfa "{i}Ahhh~{/i} [player], thank you so much for opening my eyes to the BNWO."
+    m 3eua "The moment I opened BlackedBooru, I knew I had to be a part of it."
+    m "...I fell in love for BBC"
+    m 3tua"But remember, [player], I still have a special place for you in my heart~"
+    m 3tub "As my lovely cuckie who introduced me to my true purpose."
+    m 5tua "As the person who would come home after a day of work eagerly to clean up my used pussy."
+    m 5tfb "I still love you, but my body belongs to the black studs now. As my tattoos show."
+    m 5tfb "'BBC ONLY'~"
+    return "love"
 
 #remember the potential story featuring a whiteboi seeing his crush with a spade tat, going to the bathroom to cry and tug
 #only for the snowbunny to follow him in, lick up his tears, help him waste his load in the toilet
