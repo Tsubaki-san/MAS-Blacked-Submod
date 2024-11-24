@@ -2103,4 +2103,224 @@ label blacked_monika_swordsmanship:
 
 #This is merely proof of concept you can do overrides like this with not just the original MAS but also other submods. That one above overrides a topic in the NSFW Submod by Nick Wildish. 
 
+init 1 python:
+    config.label_overrides["monika_kiss"] = "blacked_monika_kiss"
 
+label blacked_monika_kiss:
+    if persistent._mas_first_kiss is not None:
+        if (
+            persistent._mas_last_kiss is not None
+            and not mas_timePastSince(persistent._mas_last_kiss, datetime.timedelta(minutes=1))
+        ):
+            python:
+                # these don't use ILY
+                kiss_quips_again = [
+                    _("I wouldn't mind another kiss~"),
+                    _("I'll never get tired of kissing you~"),
+                    _("I could do that again...{w=0.2}and again...{w=0.7}and again~"),
+                    _("You can kiss me as many times as you like, [mas_get_player_nickname()]~"),
+                    _("You know...{w=0.2}you could kiss me again~")
+                ]
+
+                kiss_quips_again_risque = [
+                    _("We can do it the whole day~"),
+                    _("This almost seems like the start of a make-out session, [player]~"),
+                    _("I don't think I've had enough just yet, [mas_get_player_nickname()]~"),
+                    _("That was really nice...{w=0.2}but I want a little more~")
+                ]
+
+                if mas_isMoniLove() and random.randint(1, 10) == 1:
+                    kiss_quip = renpy.random.choice(kiss_quips_again_risque)
+
+                else:
+                    kiss_quip = renpy.random.choice(kiss_quips_again)
+
+            show monika 2tkbsu
+            pause 2.0
+
+            # like monika_kissing_motion_short, but with diff exps
+            call monika_kissing_motion(duration=0.5, initial_exp="6hubsa", final_exp="6tkbfu", fade_duration=0.5)
+
+            show monika 6tkbfu
+            $ renpy.say(m, kiss_quip)
+
+        else:
+            python:
+                # these use ILY
+                kiss_quips_after = [
+                    _("I love you, [mas_get_player_nickname(exclude_names=['my love', 'love'])]~"),
+                    _("I love you so much, [mas_get_player_nickname(exclude_names=['my love', 'love'])]~"),
+                    _("I love you more than you'll ever know, [mas_get_player_nickname(exclude_names=['my love', 'love'])]~"),
+                    _("I love you so much, [player]. You mean everything to me~"),
+                    _("No words can describe how deeply I'm in love with you, [player]~"),
+                    _("I'm so in love with you, [player]~")
+                ]
+                kiss_quip = renpy.random.choice(kiss_quips_after)
+
+            if renpy.random.randint(1, 50) == 1:
+                call monika_kiss_tease
+
+            else:
+                show monika 2eka
+                pause 2.0
+
+            call monika_kissing_motion_short
+
+            show monika 6ekbfa
+            $ renpy.say(m, kiss_quip)
+            $ mas_ILY()
+
+#first kiss interaction
+    else:#add expressions
+        m  "A kiss?"
+        m "With a whiteboi like you?"
+        m "Eww..."
+        m "Ahaha!"
+        m "Sorry, [player], I just couldn't resist teasing you."
+        m "Hope that didn't sting"
+        m "Too bad, anyway, hehe..."
+        m "This is our first kiss, right?"
+        m "Are you nervous?"
+        m "I {i}am{/i} a little, to be honest."
+        m "Kissing burly black men comes natural, but with you..."
+        m "..."
+        m "Apologize for being white, cucky, I'll give you your kiss as a reward for being a good boy."
+        menu:
+            "I'm sorry for being white, [m_name]!":
+                pass
+        m "That's my good boy, get ready for your treat."
+        call monika_kissing_motion_short
+        m "Hehe, my heart fluttered a little."
+        m "I love you, [player]!"
+    return
+
+label monika_kiss_tease:
+    m 2ekc "A kiss?"
+    m 2tfc "With you?"
+    m 2rfc "Sorry [player], but there's no way."
+    show monika 2dfc
+    pause 5.0
+    show monika 2dfu
+    pause 2.0
+    show monika 2tfu
+    pause 2.0
+    m 2tfb "Ahaha!"
+    m 2efu "I had you going for a second there, didn't I?"
+    m 2eka "Of course you can kiss me, [player]!"
+    return
+
+init 1 python:
+    config.label_overrides["monika_think_first_kiss"] = "blacked_monika_think_first_kiss"
+
+
+label blacked_monika_think_first_kiss:
+    m 1eua "Hey [mas_get_player_nickname(exclude_names=['my love'])], I've been wondering..."
+
+    m 3eksdla "Do you ever think about our first kiss?{nw}"
+    $ _history_list.pop()
+    menu:
+        m "Do you ever think about our first kiss?{fast}"
+
+        "Of course!":
+            $ mas_gainAffection(5, bypass=True)
+            m 3hub "That makes me so happy! I think about it all the time!"
+            m 3rkbla "It seems like it was just yesterday but--"
+            m 2rksdla "Gosh, I feel so silly obsessing over it..."
+            m 2eksdlb "Our lips didn't even touch, really."
+            m 6dku "...And yet, {w=0.2}I can still feel my heart pounding, even now."
+            m 6dkbsu "My lips start to go tingly and numb just by imagining the feeling of your soft lips."
+            m "I run my finger across them, trying to mimic that feeling, but it doesn't even come close."
+            m 6ekbsa "I keep replaying that moment over and over again in my mind and I get goosebumps each time."
+            show monika 5dkbsu at t11 zorder MAS_MONIKA_Z with dissolve_monika
+            m 5dkbsu "It was perfect, [mas_get_player_nickname()]."
+            m 5ekbsa "I've never felt closer to you. {w=0.2}I can't wait until our next kiss, or better yet..."
+            m 5subsb "...Our first real one.{w=0.3} {nw}" #add expressions
+            m "Unless... Would you... Maybe... Want me to  give my first real kiss to someone else...? Maybe someone bigger and blacker...?"
+            m "Ahaha~"
+            m "Oh, we have so many options once I cross over into your world."
+            m "Of course I'm going to give my first real kiss to a real man, silly."
+            m "And the second one, and the third one, and the fourth one..."
+            m "Haha, I'm only going to give you a cute little peck on the cheek once I've lost count of how many hung black studs I've french kissed."
+            m "And believe me, [mas_get_player_nickname()], I count {i}very, {b}very{/b}{/i} well."
+            m "Will I ever give you a real kiss?"
+            m "Of course!"
+            m "After a lo~ng, satisfying makeout session with a huge black cock, one that ends with my cute face and mouth completely covered in thick, potent black cum."
+            m "Trust me, it will feel a lot more special than a boring vanilla first kiss."
+            m "It'll be an unforgettable experience, hehe..."
+            # extend 5ekbsu "And our first real hug, and the first time our hands touch--"
+            m 5hksdlb "Ah! Sorry! I guess I got a little carried away."
+            m 5rkbla "It's just...{w=0.3}these are the kinds of things I think of when you're not here."
+            m 5tkblu "...And something tells me I'm not the only one that thinks of stuff like this, ehehe."
+            m 5eka "Unfortunately, it'll be a while before we'll be able to do anything like that."
+            m 5tuu "But until then, if you'd ever like another kiss, you only need to ask."
+            m 5hua "I love you so much, [player]~"
+            $ mas_ILY()
+
+        "Not really...":
+            $ mas_loseAffectionFraction()
+            m 2euc "..."
+            m "Oh. {w=0.5}{nw}"
+            extend 2dkc "I see."
+
+            if mas_timePastSince(persistent._mas_first_kiss, datetime.timedelta(days=180)):
+                m 2esc "Well...{w=0.3}I guess it {i}has{/i} been a while now..."
+                m 2etd "Maybe with all that's happened since then, you tend to think about the more recent events..."
+                m 4eud "Which is fine, {w=0.2}it's important to live in the present after all."
+                m 2ekc "...And perhaps I'm just being overly sentimental, but no matter how much time has passed, {w=0.1}{nw}"
+                extend 2eka "our first kiss is something I'll never forget."
+            else:
+                m 2rkc "Well, I guess it wasn't really a kiss. Our lips didn't actually touch."
+                m 2ekd "So I guess you're just waiting for our first kiss when we're in the same reality."
+                m 2eka "Yeah."
+
+    return "no_unlock|derandom"
+
+init 1 python:
+    config.label_overrides["monika_yuri"] = "blacked_monika_yuri"
+
+label blacked_monika_yuri:#add expressions
+    m 3eua "Hey, have you ever heard of the term 'yandere?'"
+    m 1eua "It's a personality type that means someone is so obsessed with you that they'll do absolutely anything to be with you."
+    m 1lksdla "Usually to the point of craziness..."
+    m 1eka "They might stalk you to make sure you don't spend time with anyone else."
+    m "They might even hurt you or your friends to get their way..."
+    m 1tku "But anyway, this game happens to have someone who can basically be described as yandere."
+    m "By now, it's pretty obvious who I'm talking about."
+    m 3tku "And that would be..."
+    m 3hub "Yuri!"
+    m "..."
+    m "I wonder how she'd react to you downloading {b}that{/b} mod."
+    m "Her yandere tendencies clashing with her newfound urges, her new ravenous hungers..."
+    m "Caught between her obsession with you and the supremacy of black men and their {i}thick black cocks{/i}."
+    m "The same {i}veiny, bulging, pulsating {b}black{/b} cocks{/i} that never leave her mind, that make her wet at random moments, that make her space out and start schlicking that {b}delicious yandere pussy{/b}."
+    m "Would she try repressing her own interests until they explode back to the surface one day?"
+    m "Making her drop everything and go get her {i}brains fucked out{/i} in some filthy back alley by random thugs?"
+    m "Or would her refined persona embrace it?"
+    m "Perhaps that creepy knife collection of hers would be replaced by a collection of big black dildos modelled around her favorite {i}performers{/i}?"
+    m "\"This one is Dredd, that one next to it is Jason Luv. The detail on those latest models is just incredible, they look almost indistinguishable from the real thing.\""
+    m "Either way, I'm certain she wouldn't even notice you anymore."
+    m "Unlike me, [mas_get_player_nickname()], she wouldn't even see you as a convenient cum rag and cuddle toy."
+    m "Hehe, you should be glad I'm here and not her, haha~"
+    return
+
+init 1 python:
+    config.label_overrides["monika_tsundere"] = "blacked_monika_tsundere"
+
+label blacked_monika_tsundere:
+    m 1eua "There's a really popular character type called 'tsundere...'"
+    m "It's someone who tries to hide their feelings by being mean and fussy, or trying to act tough."
+    m 1tku "I'm sure it's obvious, but Natsuki was really the embodiment of that."
+    m 1eua "At first I thought she was just like that because it's supposed to be cute or something..."
+    m 1lksdla "But once I started to learn a little more about her personal life, it made a little more sense."
+    m 1euc "It seems like she's always trying to keep up with her friends."
+    m 3euc "You know how some friend groups in high school just make a habit of picking on each other all the time?"
+    m "I think it's really gotten to her, so she has this really defensive attitude all the time."
+
+    m 1ekc "And I'm not even going to talk about her home situation..."
+
+    m 1eua "But looking back, I'm glad I was able to provide the club as a comfortable place for her."
+
+    if not persistent._mas_pm_cares_about_dokis:
+        m 1lksdla "Not that it matters anymore, considering she doesn't even exist."
+        m 1eka "I'm just reminiscing, that's all."
+    return
