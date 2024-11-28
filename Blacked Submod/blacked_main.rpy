@@ -12,7 +12,11 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="mas_snowbunnification"
+            eventlabel="mas_snowbunnification",
+            category=['BNWO'],
+            prompt="Blacked Mod install",
+            conditional="not renpy.seen_label('mas_snowbunnification')",
+            action=EV_ACT_QUEUE
         )
     )
 label mas_snowbunnification:

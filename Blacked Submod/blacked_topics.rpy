@@ -8,9 +8,8 @@ init 5 python:
                 eventlabel='monika_imouto',
                 prompt="Do you like little sisters?",
                 category=['you'],
-                pool=True,
-                unlocked=False,
-                rules={"no_unlock":None}
+                unlocked = True,
+                pool = True
         )
     )
 
@@ -33,13 +32,48 @@ label monika_imouto:
 init 5 python:
     addEvent(
         Event(
+                persistent.event_database,
+                eventlabel='monika_mommies',
+                prompt="What do you think of motherly types?",
+                category=['you', 'BNWO'],
+                pool=True,
+                unlocked=True     
+        )
+    )
+
+label monika_mommies:#add expressions
+    m 1euc "Motherly types of mommies, [player]?"
+    m "Because I think you might be thinking of something quite depraved there..."
+    m "Hehe..."
+    m "Did you know the sounds of {i}interracial breeding{/i} are crucial to a whiteboi's development?"
+    m "It's true!"
+    m "And it's a mother's responsiblity to ensure her white offspring develops healthily."
+    m "It's a sick crime to deprive a growing whiteboi of his mother's depraved moans and shrieks and of those beautiful plapping noises!"
+    m "That's why it is of utmost importance for a {i}mommy{/i} to get brutally blacked every night, right next to her beta boy's room."
+    m "Oh, and of course, it is also her responsiblity to cage the little cuck-in-training."
+    m "In the BNWO, chastity is mandatory for whitebois, after all."
+    m "Just imagine leaving your room in the morning, only to see the key to your cage between your {i}mommy's{/i} voluptous breasts,"
+    m "Her loving smile, her lovers' pubes still hanging on her lips,"
+    m "Those lips that moaned and sucked and slurped a~ll night on those {i}meaty dark poles{/i}."
+    m "Getting a good morning kiss from her, feeling the aroma of all the BBC semen she gulped down and the taste of those wonderful cocks..."
+    m "A~h, just delightful..."
+    m "And of course, a good mother makes sure her son has a suitable mate."
+    m "A snowbunny slut who will make sure he's caged, cucked and subservient."
+    m "And in the rare event he finds a girl who isn't a snowbunny,"
+    m "Well, mommy can always introduce the poor misguided girl to her most {i}gifted{/i} black bulls."
+    m "For the health of the young lovebirds' relationship, of course."
+    return
+
+
+init 5 python:
+    addEvent(
+        Event(
             persistent.event_database,
             eventlabel='monika_oneesan',
             prompt="Do you like older sisters?",
             category=['you'],
-            pool=True,
-            unlocked=False,
-            rules={"no_unlock":None}
+            unlocked = True,
+            pool = True
         )
     )
 
@@ -100,7 +134,6 @@ init 5 python:
             eventlabel="monika_reparations",
             category=["society"],
             prompt="Reparations",
-            conditional="persistent._mas_monika_went_black",
             random=True
         )
     )
@@ -166,7 +199,6 @@ init 5 python:
             eventlabel="monika_cuckolding_benefits",
             category=["society", "romance"],
             prompt="Benefits of Cuckolding",
-            conditional="persistent._mas_monika_went_black",
             random=True
         )
     )
@@ -203,7 +235,6 @@ init 5 python:
             eventlabel="monika_caging_benefits",
             category=["society", "romance"],
             prompt="Benefits of Caging",
-            conditional="persistent._mas_monika_went_black",
             random=True
         )
     )
@@ -241,7 +272,6 @@ init 5 python:
             eventlabel="monika_bbc_daydream",
             category=["romance"],
             prompt="Daydreaming of BBC",
-            conditional="persistent._mas_monika_went_black",
             random=True
         )
     )
@@ -260,8 +290,7 @@ init 5 python:
             eventlabel="monika_qos_tattoos",
             category=["romance"],
             prompt="About QOS Symbols",
-            conditional="persistent._mas_monika_went_black",
-            random=True
+            unlocked = True,
         )
     )
 
@@ -308,7 +337,6 @@ init 5 python:
             eventlabel="monika_skimpy_outfit",
             category=["romance"],
             prompt="Dressing for BBC",
-            conditional="persistent._mas_monika_went_black",
             random=True
         )
     )
@@ -350,7 +378,6 @@ init 5 python:
             eventlabel="monika_classroom_sex",
             category=["romance"],
             prompt="Fucking in the classroom",
-            conditional="persistent._mas_monika_went_black",
             random=True
         )
     )
@@ -378,7 +405,6 @@ init 5 python:
             eventlabel="monika_cheating_or_not_cheating",
             category=["romance"],
             prompt="Play the cheating or not cheating game",
-            conditional="persistent._mas_monika_went_black",
             random=True
         )
     )
@@ -446,7 +472,6 @@ init 5 python:
             eventlabel="monika_love_is_cuckoldry",
             category=["romance"],
             prompt="Cuckoldry as seen by society",
-            conditional="persistent._mas_monika_went_black",
             random=True
         )
     )
@@ -481,10 +506,8 @@ init 5 python:
             eventlabel="monika_bbc_fascination",
             category=["romance"],
             prompt="Loving BBC",
-            conditional="persistent._mas_monika_went_black",
-            random=True,
-            unlocked=False,
-            rules={"no_unlock":None}
+            unlocked = True,
+            pool = True
         )
     )
 
@@ -513,10 +536,8 @@ init 5 python:
             eventlabel="monika_furthering_bnwo",
             category=["you"],
             prompt="How can I help the BNWO become reality?",
-            conditional="persistent._mas_monika_went_black",
-            pool=True,
-            unlocked=False,
-            rules={"no_unlock":None}
+            unlocked = True,
+            pool = True
         )
     )
 
@@ -603,6 +624,21 @@ label monika_tattoos:
     m 5tfb "I still love you, but my body belongs to the black studs now. As my tattoos show."
     m 5tfb "'BBC ONLY'~"
     return "love"
+
+init 5 python:
+    addEvent(
+        Event(
+                persistent.event_database,
+                eventlabel='monika_virginity',
+                prompt="When you cross over to my reality, would you take my virginty?",
+                category=['romance','you', 'BNWO'],
+                unlocked = True,
+                pool = True
+        )
+    )
+
+label monika_virginity:
+    m 3hub "Nope!"
 
 #remember the potential story featuring a whiteboi seeing his crush with a spade tat, going to the bathroom to cry and tug
 #only for the snowbunny to follow him in, lick up his tears, help him waste his load in the toilet
