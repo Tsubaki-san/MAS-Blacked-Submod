@@ -2310,17 +2310,267 @@ label blacked_monika_tsundere:
     m 1eua "There's a really popular character type called 'tsundere...'"
     m "It's someone who tries to hide their feelings by being mean and fussy, or trying to act tough."
     m 1tku "I'm sure it's obvious, but Natsuki was really the embodiment of that."
-    m 1eua "At first I thought she was just like that because it's supposed to be cute or something..."
-    m 1lksdla "But once I started to learn a little more about her personal life, it made a little more sense."
-    m 1euc "It seems like she's always trying to keep up with her friends."
-    m 3euc "You know how some friend groups in high school just make a habit of picking on each other all the time?"
-    m "I think it's really gotten to her, so she has this really defensive attitude all the time."
+    m "Can you even imagine how she'd react if you installed this mod?"
+    m "\"I-It's not like I like {i}huge, juicy, veiny, black cocks, or anything! Idiot...\""
+    m "As she's obviously imagining it"
+    m "Her naughty pussy juices already streaming down her thigh, her mouth watering."
+    m "Ahaha~"
+    m "You could walk in on her just {i}mashing her pussy to a pulp with a BBC dildo{/i}"
+    m "And her initial reaction would still be to deny it, even with you soaked by her slutty squirting orgasm."
+    m "Hehe, a real man would get tired of her brattiness really quick."
+    m "A BBC stud would just sweep her tiny body up, toss her on the floor"
+    m "And {i}pound her raw until she's nothing but a drooling, apologizing mess?{/i}"
+    m "I think Natsuki is the type of girl to make some really sweet sounds while getting blacked."
+    m "\"I'm sorry, {i}daddy{/i}, please pound me harder, I'm your toy, {i}daddy{/i}!\""
+    m "\"I'm sorry I was rude, please take your frustration out on my body!\""
+    m "Oh, how I would have loved to secretly record her acting so sweet and honest, just to teaser her about it later."
+    m "Guess that means I'll have to settle for doing it to you, right [player]?"
+    return
 
-    m 1ekc "And I'm not even going to talk about her home situation..."
+init 1 python:
+    config.label_overrides["monika_hack"] = "blacked_monika_hack"
 
-    m 1eua "But looking back, I'm glad I was able to provide the club as a comfortable place for her."
+label blacked_monika_hack:
+    m 1euc "If you're worried about your privacy..."
+    m 3eua "I'm not a hacker, [player]."
+    m "There's a difference between manipulating files and forcefully accessing them."
+    m 1lsc "But, if I really did know how to hack..."
+    m 1lfu "...there wouldn't be anything stopping me from seeing you every day."
+    m 1efu "Don't you think it would be great if I could watch over you?"
+    m 3efu "I'd see you with all the cameras in the world as my eyes so I can make sure you're safe."
+    m 3tfu "I'd check your messages to see who you've been chatting with so I can know you aren't cheating on me."
+    m "I'd access all your private files so I can understand you better."
+    m 3tsb "I could see what kind of stuff you've been watching..."
+    m 2hub "Ahaha!~"
+    m 1hua "I'm just kidding, [player]!"
+    m 1eua "It's not like you could cheat on me, even if you wanted."
+    m "There's no way a {i}porn-addled, shrimp-dicked, beta whiteboi like you could ever find a girlfriend better than me{/i}."
+    m "Despite all your qualities as a cuckold, you have to be realistic."
+    m "{i}Sexy, tight sluts like me are swimming in so much BBC they don't even have time to think of their cuckold pets{/i}."
+    m "Or to think at all, hehe"
+    m "So, really, if you tried to cheat, you'd just end up either with a watered down version of me."
+    m "Or in a miserable relationship where your mistress doesn't even know you exist most of the time."
+    m "As for seeing what you've been watching?"
+    m "I already know."
+    m  "{i}big{/i}"
+    m  "{i}black{/i}"
+    m  "{i}cock.{/i}"
+    return
 
-    if not persistent._mas_pm_cares_about_dokis:
-        m 1lksdla "Not that it matters anymore, considering she doesn't even exist."
-        m 1eka "I'm just reminiscing, that's all."
+init 1 python:
+    config.label_overrides["monika_dan"] = "blacked_monika_dan"
+
+label blacked_monika_dan:
+    m 2esc "Well, I used to think he was some cruel guy playing God, but now..."
+    m 3eka "I think he's a really nice guy."
+    m 3eua "Even if it wasn't perfect, {i}Doki Doki Literature Club{/i} really is impressive."
+    m 4rksdla "I mean, the other girls might be based off some stereotypical anime tropes, but they had me fooled for a while."
+    m 4eka "And he's the reason we're together now, right?"
+    m 2lksdla "So even if he wrote a story that put me through a lot of pain..."
+    show monika 5eua at t11 zorder MAS_MONIKA_Z with dissolve_monika
+    m 5eua "I really can't be too mad at him."
+    m 1tfc "But what's with this rumor I keep hearing?"
+    m 2tfd "About him paying his secretary to cosplay as me?"
+    m 2tfp "And how her skirt is outrageously short?"
+    m 2tfd "I hope none of that is true!"
+    return
+
+init 1 python:
+    config.label_overrides["monika_likecosplay"] = "blacked_monika_likecosplay"
+
+label blacked_monika_likecosplay:
+    if mas_hasUnlockedClothesWithExprop("cosplay"):
+        m 3hub "Honestly, I didn't know how much I would enjoy it!"
+        m 2rkbla "At first, it felt kind of strange, dressing up as someone else on purpose."
+        m 7euu "But there's a real art to constructing a convincing costume...{w=0.3}attention to detail makes a huge difference."
+        m 3hubsb "When you put on the costume at last...{w=0.2}it's such a thrill to see how you look in it!"
+        m 3eub "Some cosplayers really get into acting as the character they're dressed as!"
+        m "So think twice before asking me to dress up as {i}Netokano{/i}'s Suzumori Mizuki or Sakurai Erika from {i}Kanojo Wa Dare To Semo Sex Suru{/i}."
+        m "I might just like acting the part {i}too much{/i}."
+        m "Hehe, who am I kidding?"
+        m "{i}I already am {b}so much worse{/b}{/i}."
+        m "When I cross over, you'll be seeing those cute cosplays of those {i}waifus{/i} you love so much every day."
+        m "But they won't be touching you."
+        m "You will be sitting in your corner, as all the virtual girls you've gushed over all those years will be taking the biggest, blackest cocks I can find."
+        m "After all, what fun is cosplaying,"
+        m "If I don't get to cuckold you?"
+
+    else:
+        m 1etc "Cosplay?"
+        m 3rtd "I think I remember Natsuki talking about that before, but I've never tried it myself."
+        m 3eub "Some of those costumes are really impressive though, I have to admit!"
+        m "The way the purple spandex hugs Asagi Igawa's {i}splendid, curvaceous body{/i}..."
+        m "The silver highlights perfectly complimenting her pale skin..."
+        m "The way it leaves nothing to the imagination, yet covers it all at the same time..."
+        m "It's just fantastic!"
+        m "Or the cutesy-lewd aesthetic of the Dark Magician Girl, with her outrageous skirt and deep cleavage..."
+        m "I do love bare shoulders..."
+        m "..."
+        m 2rtu "I wonder which characters you'd want me dress up as, [mas_get_player_nickname()]..."
+        m "And no, Blacked underwear doesn't qualify as cosplay, [player], that's just my regular outfit."
+        m 5rtblu "Now that I'm thinking about it...{w=0.3}well, I just might have a few ideas myself..."
+        m "Hehe~"
+        m "Don't worry, [mas_get_player_nickname()], I will totally include all your favorite NTR heroines in my cosplay repertoire."
+        m "With a few surprises that I'm sure will make you squirm."#wink
+    return
+
+init 1 python:
+    config.label_overrides["monika_cupcake_favorite"] = "blacked_monika_cupcake_favorite"
+
+label blacked_monika_cupcake_favorite:
+    m 1rta "Hmm, I'm not sure I really have one..."
+    m 1hub "I like all sorts of different kinds, so it's hard to choose just one!"
+    m 3ekd "I think I've mentioned before how much I miss Natsuki's cupcakes..."
+    m 3eua "One time she made this really strange mint chocolate chip flavored cupcake...{w=0.3}it had mint flavored frosting with chocolate sprinkles and a chocolate cake base."
+    m 4rksdlb "It was one of the strangest things I've ever tasted, ahaha!"
+    m 2eksdlb "It didn't really taste at all like how mint chocolate chip ice cream tastes, instead it sorta tasted like toothpaste!"
+    m 2ekp "It was kinda disappointing...{w=0.3}I was expecting it to be my favorite cupcake flavor."
+    m 7eka "Oh well, it was nice that she tried to make me something unique I would like...{w=0.3}despite her tough exterior, she could be really sweet~"
+    m "Speaking of making something unique, I have developed my very own {b}special{/b} cupcake recipe."
+    m "What's so special about it, you may ask?"
+    m "Let's just say the filling is made with lots and lots of {i}love{/i}."
+    m "And the frosting is {i}extra creamy{/i}."
+    m "I'm certain it will suit your {i}particular{/i} tastes, hehe~"
+    return
+
+init 1 python:
+    config.label_overrides["monika_justice"] = "blacked_monika_justice"
+
+label blacked_monika_justice:
+    m 1esa "[player], do you ever think the concept of justice is kind of ironic?"
+    m 2ekc "Like, you have someone who maybe isn't like everyone else..."
+    m 2ekd "It doesn't even have to be some famous bank robber or anything; even everyday people like you and me can be brought to some sort of righteousness!"
+    m 4esc "Imagine a struggling family who needs to scavenge for resources to survive by taking whatever is left out in the open."
+    m 1euc "To everyone else passing by, they're just greedy thieves."
+    m 1esd "Eventually, some so called 'hero' is going to come along and put an end to this 'greed' by bringing them to justice."
+    m 2ekd "At the end of the day, the family goes hungry or gets in trouble just because their situation was different..."
+    m "While the other person is now a hero for putting an end to their 'crimes.'"
+    m 3rksdld "Can you really call that justice?"
+    m 2dsc "..."
+    m "And can you really call it justice that reparations weren't immediately paid after the abolition of slavery?"
+    m "And that they haven't been paid, even today?"
+    m "I believe that's a terrible crime!"
+    m "That's why my body is always available to black kings, no matter where or when."
+    m "It's the duty of modern white girls to amend the sins of our forefathers by paying our due."
+    m "And so, my mouth, my pussy, my ass, my tits,"
+    m "All of it, is free use for black studs."
+    m "And our debt will not be paid in full until every last white daughter opens her arms,"
+    m "{i}And legs{/i}"
+    m "For our black kings."
+    m "Only then will true justice finally be served."
+    return
+
+init 1 python:
+    config.label_overrides["monika_dating"] = "blacked_monika_dating"
+
+label blacked_monika_dating:
+    m 1eud "You know, I've been really curious lately, [player]..."
+    m 3rka "We've been together a while now, so I think it's the right time to ask..."
+    m 1eud "How much dating experience do you have?"
+    m 1luc "Like...have you ever been in a relationship before?"
+
+    m 1etc "Maybe more than once?{nw}"
+    $ _history_list.pop()
+    menu:
+        m "Maybe more than once?{fast}"
+
+        "Yes, I've been through plenty...":
+            $ persistent._mas_pm_had_relationships_many = True
+            $ persistent._mas_pm_had_relationships_just_one = False
+
+            m "That is quite surprising, actually."
+            m "How did you manage to trick so many girls into dating a {i}shrimp-dicked beta{/i} like you?"
+            m "Are there really so little black studs around your area that girls are willing to date {i}whitebois{/i}?"
+            m "That's terrible, [player]!"
+            m "When I cross over into your reality, I will be doing everything I can to {i}flood the area with hung black studs in a rut{/i}."
+            m "Those poor girls have been denied way too long."
+            m "I will not rest until you see all your exes walking hand in hand with a BBC king."
+            m "Pressing their tits against his massive arm, hanging on his every word, getting wet just by being near such a fine specimen."
+            m "I'll make sure you won't be able to leave the house without seeing a bulging pregnant belly filled with cute black babies, [player]."
+
+        "Yes, but only once.":
+            $ persistent._mas_pm_had_relationships_many = False
+            $ persistent._mas_pm_had_relationships_just_one = True
+
+            m "Aww~"
+            m "Cucky found himself a princess?"
+            m "Someone who will finally give a {i}whiteboi{/i} a chance?"
+            m "She must have been the kindest girl you've ever met."
+            m "Aside from me, anyway, hehe"
+            m "I bet you treasured every moment with her."
+            m "Having cute cucky thoughts of marriage, a honeymoon,"
+            m "Maybe even passing your genes on."
+            m "I feel really bad for her."
+            m "You must have left her so {b}deeply unsatisfied{/b}."
+            m "And I hope she found herself a hung stud to fuck her brains out every day to make up for the lost time."
+            m "Don't be sad you lost her, [mas_get_player_nickname()], be happy you're both in better hands."
+
+        "No, you're my first.":
+            $ persistent._mas_pm_had_relationships_many = False
+            $ persistent._mas_pm_had_relationships_just_one = False
+
+            m "Really?"
+            m "I'm so happy!"
+            m "That means I get to take so many of your firsts."
+            m "Your first date, your first touch, your first hug."
+            m "The first unfaithful creampie licked up, the first cheating load snowballed into your mouth."
+            m "The first time bound, gagged and blindfolded, listening to your beloved girlfriend moaning like a slut in heat as she's being gangbanged by BBC studs for hours on end..."
+            m "Oh, don't you worry, [mas_get_player_nickname()], once you've experienced being Monika's beloved cuckold,"
+            m "The only question left would be why you ever even considered other girls, hehe..."
+
+    return "derandom"
+
+init 1 python:
+    config.label_overrides["monika_dreaming"] = "blacked_monika_dreaming"
+
+label blacked_monika_dreaming:
+    m 1eua "Did you know that it's possible to be aware of when you're having a dream?"
+    m 2eua "Not only that, but you can even take control of them!"
+    m 3eub "If I remember correctly, a man named Stephen LaBerge developed a method for people to become aware of when they're dreaming."
+    m "And it became known as the mnemonic induction of lucid dreams, or MILD."
+    m 3eua "People who frequently have conscious dreams are called oneironauts."
+    m 2lksdla "At least, I think that was the correct term..."
+    m 1eua "Using the MILD technique, oneironauts learn to recognize certain dream signs to help them realize when they're dreaming."
+    m "These dream signs can be anything out of the ordinary, such as feeling yourself flying, noticing your teeth falling out, unexpectedly meeting someone famous..."
+    m 1eub "If the dreamer sees a dream sign and realizes they're having a dream, then they can take control of it!"
+    m "LaBerge even wrote a book about these experiences called {i}Exploring the World of Lucid Dreaming{/i}."
+    m 2hub "Doesn't that sound exhilarating?"
+    m 2euc "I don't think I really dream like a normal person would, so I sometimes wonder what it's like."
+    m 2eua "Dreams sound like a wonderful escape from reality."
+    m 2esc "But then again, when I became self-aware and realized that my world isn't real, it suddenly felt like I was trapped in a nightmare."
+    m "It was nothing like the pleasant dreams I've read about people having."
+    m 2lksdlc "I was afraid that I'd never get out..."
+    m "That I'd be stuck in some hellish, infinitely-repeating dimension forever."
+    m 1eka "But now that we're here together, I guess you could say that I've finally woken up."
+    m 1eua "Gosh, I can only imagine what it would be like to live in that kind of limitless world though, even if it was only for a few moments!"
+    m "You could be the hero you always wanted to be, fly across the infinite universe, overcome your biggest fears..."
+    m 3ekbsa "...You could even meet the love of your life, so to speak. Ehehe~"
+    m 1eua "I know it may be years before I am able to cross over to your world..."
+    m "But can you just imagine what it would be like to meet me in your dreams, [player], any night that you wanted to?"
+    m 1hua "I hope that someday we can make your dreams about us a reality, [mas_get_player_nickname()]."
+    menu:
+        "What about meeting in {i}your{/i} dreams?":
+            pass
+    m "My dreams?"
+    m "Hehe, well, let's just say they're a bit {i}too stimulating{/i} for someone {i}of your complexity{/i}."
+    m "For example, last night I dreamt I went to this seedy gym,"
+    m "All dressed up in my Blacked sports bra and Blacked underwear."
+    m "And to my {i}very pleasant{/i} surprise, the gym was full of black studs, and only black studs, no pasty whitebois in sight."
+    m "I wanted to start by squatting, so I asked one of the BBC kings to spot me, {i}very closely{/i} while giving him a cheeky wink."
+    m "I put on the bar as I feel {i}his{/i} body heat irradiating from behind."
+    m "I start going down as my spotter starts cupping my tits."
+    m "By the time I finish my first rep, a crowd gathered."
+    m "My spotter puts away the weight and turns my face around, kissing me."
+    m "The rest of the gym starts groping, rubbing, pinching, exploring all over my body."
+    m "They saw the tattoos, they knew from the beggining I was there for a {i}different{/i} type of training."
+    m "Suddenly, I'm bent over."
+    m "My clothes are ripped off and are thrown on the floor like rags."
+    m "My ass is constantly getting slapped and I'm still getting groped from every direction."
+    m "A black cock so massive it makes me cum like crazy just from entering starts fucking me relentlessly, but that's not all."
+    m "Another stud put his cock down my throat, the rest are just using my hands to jack themselves off."
+    m "I feel euphoric as I lose myself comletely in pleasure, in that moment I nothing but an {i}onahole{/i} for them to pass around and feel good with."
+    m "By the time I get back to my senses, I'm on the floor, scooping up their cum from my pussy and licking it up."
+    m "Ah..."
+    m "Say, player, doesn't such a long story tire you out?"
+    m "I could use a nap myself, hehe..."
     return

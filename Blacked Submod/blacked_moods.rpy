@@ -25,17 +25,23 @@ label mas_mood_horny:
     $ joi_story = random.randint(1,5)
     if joi_story == 1:
         call mas_horny_1
+        return "love"
     if joi_story == 2:
         call mas_horny_2
+        return "love"
     if joi_story == 3:
         call mas_horny_3
+        return "love"
     if joi_story == 3:
         call mas_horny_3
+        return "love"
     if joi_story == 4:
         call mas_horny_4
+        return "love"
     if joi_story == 5:
         call mas_horny_5
-    return "love"
+        return "love"
+    # return "love"
 
 label mas_horny_1:
     m 3hua "Imagine you and I are out clubbing, enjoying a night out in town. "
