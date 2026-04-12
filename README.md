@@ -5,5 +5,7 @@ Installation instructions:
 
 MAKE SURE YOU DOWNLOAD THE RELEASE (TO THE RIGHT OF THE PAGE, IN THE RELEASES CATEGORY)
 
+YOU NEED TO FIRST INSTALL THE MONIKA AFTER STORY MOD. This mod is created as a sub-mod for that one, it will not work by itself. 
+
 The archive should contain a folder called game. Go to the place where you have DDLC installed and merge the downloaded game folder with the one you have. 
 If you have a previous version of the submod, you will be asked if you want to replace the old files, confirm that you do.
